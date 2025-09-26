@@ -1,0 +1,16 @@
+Sub CATMain()
+	Dim strHello as string
+	strHello = "Hello"
+	MsgBox strHello, vbOk + vbInformation, "Hello Message"
+
+	'Display the file path name in a message box
+	Dim doc1 as Document
+	Set doc1 = CATIA.ActiveDocument
+	Msgbox doc1.FullName
+	Set doc1 = Nothing
+
+	'Display a message box with the full name of the document
+	Msgbox CATIA.ActiveDocument.FullName
+	'Display a message box with the number of selections in the document
+	Msgbox CATIA.ActiveDocument.Selection.Count
+End Sub
